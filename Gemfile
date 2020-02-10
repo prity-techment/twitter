@@ -23,6 +23,14 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 
+gem 'grape'
+gem 'grape-jbuilder'
+gem 'grape-swagger'
+gem 'grape-swagger-rails'
+gem 'haml-rails'
+gem 'hashie-forbidden_attributes'
+gem 'jquery-rails'
+gem 'jwt'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

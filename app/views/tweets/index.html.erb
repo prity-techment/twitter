@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tweets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.title %></td>
+        <td><%= tweet.body %></td>
+        <td><%= tweet.user.email %></td>
+        <% if tweet.is_owned_by(current_user.id)%>
+          <td><%= link_to 'Show', tweet %></td>
+          <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+          <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% else %>
+          <td>
+            <%= link_to 'View User', show_user_path(tweet.user)%>
+          </td>
+          <td colspan='2'>Follow User</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tweet', new_tweet_path %>

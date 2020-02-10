@@ -1,0 +1,26 @@
+<h1><%= @user.email %></h1>
+<h2>	
+	<%= link_to 'Follow', follow_path(@user)%>
+</h2>
+
+<h1><%= @user.username %>'s Tweets</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.tweets.each do |tweet| %>
+      <tr>
+        <td><%= tweet.title %></td>
+        <td><%= tweet.body %></td>
+        <td><%= tweet.user.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

@@ -158,12 +158,12 @@ GEM
       ruby2_keywords (~> 0.0.1)
     mustermann-grape (1.0.1)
       mustermann (>= 1.0.0)
-    nio4r (2.5.2)
+    nio4r (2.5.8)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
     public_suffix (4.0.3)
-    puma (4.3.1)
+    puma (4.3.12)
       nio4r (~> 2.0)
     rack (2.2.1)
     rack-accept (0.4.5)
@@ -286,7 +286,7 @@ DEPENDENCIES
   jquery-rails
   jwt
   listen (>= 3.0.5, < 3.2)
-  puma (~> 4.1)
+  puma (~> 4.3)
   rails (~> 5.2.3)
   sass-rails (>= 6)
   selenium-webdriver
